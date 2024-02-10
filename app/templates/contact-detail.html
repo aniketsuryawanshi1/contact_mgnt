@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}User Detail{% endblock  %}
+
+{% block content %}
+
+<style>
+
+      .card {
+      max-width: 1000px;
+      margin: 50px auto;
+      border-radius: 15px;
+    }
+      .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+</style>
+
+<!-- Contact Details Card -->
+<div class="card">
+  <div class="row g-0">
+    <div class="col-md-4 d-flex align-items-center justify-content-center">
+      <img src="{{profile.photo.url}}" class="img-fluid profile-img" alt="Profile Image">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ profile.name}}</h5>
+        <p class="card-text"><strong>Email:</strong> {{ profile.email}}</p>
+        <p class="card-text"><strong>Mobile Number:</strong> {{profile.pnum}}</p>
+        <p class="card-text"><strong>Gender:</strong> {{profile.gender}}</p>
+        <p class="card-text"><strong>Job Role:</strong> {{profile.job_role}}</p>
+        <!-- Buttons -->
+        <a href="{% url 'home' %}" class="btn btn-outline-dark ms-2">Go Back</a>
+        <a href="{% url 'edit-contact' profile.id %}" class="btn btn-outline-dark ms-2">Edit Contact</a>
+        <a href="{% url 'delete-contact' profile.id %}" class="btn btn-outline-dark ms-2">Delete Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock  %}
+
+

@@ -1,0 +1,50 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <!--all css files link hare -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.main.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.bundle.main.js' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <!--Bootstrap links-->
+
+</head>
+<style>
+    body {
+        background-color: #f8f9fa;
+      }
+      /* Hide scrollbar for Chrome, Safari, and Opera */
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge, and Firefox */
+      body {
+        scrollbar-width: thin; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        display: none; /* Safari and Chrome */
+      }
+      
+</style>
+<body>
+    <!--
+    write hare nav bar code  <h1>Contact Management Page</h1>
+    -->
+    {% block content %}
+      
+    {% endblock %}
+    <!--Add your javascript-->
+    <script src="{% static 'bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
